@@ -6,7 +6,7 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-
+    // compile less
     less: {
       development: {
         files: {
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
       }
     },
 
-
+    // copy statics
     copy: {
       main: {
         files: [
@@ -96,11 +96,8 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('serve',[
-    'connect',
-    'watch'
-  ]);
+  // build task
   grunt.registerTask('build', [
-    'concat','less','autoprefixer','cssmin'
+    'copy','concat','less','autoprefixer','cssmin'
   ]);
 };
