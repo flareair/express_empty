@@ -1,3 +1,3 @@
-** Express empty app
+## Express empty app
 
 With jquery, bootstrap and f-awesome
